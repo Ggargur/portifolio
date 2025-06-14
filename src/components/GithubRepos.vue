@@ -1,17 +1,17 @@
 <template>
     <section id="repositorios" class="container my-5">
-      <h2 class="mb-4">Repositórios Recentes</h2>
+      <h2 class="mb-4">Recent Contributions</h2>
       <div class="row">
         <div v-for="repo in repos" :key="repo.id" class="col-md-4 mb-4">
           <div class="card h-100 shadow-sm">
             <div class="card-body">
               <h5 class="card-title">{{ repo.name }}</h5>
               <p class="card-text">
-                {{ repo.description || 'Sem descrição.' }}
+                {{ repo.description || 'No description.' }}
               </p>
             </div>
             <div class="card-footer d-flex justify-content-between align-items-center">
-              <small class="text-muted">Atualizado em {{ formatDate(repo.updated_at) }}</small>
+              <small class="text-muted">Updated on {{ formatDate(repo.updated_at) }}</small>
               <a :href="repo.html_url" target="_blank" class="btn btn-sm btn-primary">Ver</a>
             </div>
           </div>

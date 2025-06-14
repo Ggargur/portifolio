@@ -65,7 +65,7 @@
 
       <!-- Habilidades -->
       <section>
-        <h2 class="mb-3" id="skills">Habilidades</h2>
+        <h2 class="mb-3" id="skills">Skills</h2>
         <div class="d-flex flex-wrap gap-2">
           <span v-for="(skill, i) in skills" :key="i" class="badge text-bg-primary">
             {{ skill }}
