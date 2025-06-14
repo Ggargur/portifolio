@@ -24,10 +24,12 @@
               <a class="nav-link" href="#skills">Skills</a>
             </li>
             <li class="nav-item">
-              <button class="btn btn-outline-primary ms-lg-2 mt-2 mt-lg-0" @click="toggleDark">
-                {{ isDark ? 'Light Mode' : 'Dark Mode' }}
+              <button class="btn btn-outline-secondary ms-lg-2 mt-2 mt-lg-0" @click="toggleDark"
+                :aria-label="isDark ? 'Ativar Light Mode' : 'Ativar Dark Mode'">
+                <i :class="isDark ? 'bi bi-sun-fill' : 'bi bi-moon-stars-fill'"></i>
               </button>
             </li>
+
           </ul>
         </div>
       </div>
