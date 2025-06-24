@@ -1,5 +1,6 @@
 <template>
   <div>
+    <BubbleBackground :bubbleCount="30" :radiusMin="8" :radiusMax="50" :speedMin="0.3" :speedMax="1" />
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
       <div class="container">
         <a class="navbar-brand" href="#">
@@ -101,6 +102,7 @@
 import { defineComponent, ref, onMounted, onBeforeUnmount, watchEffect } from "vue";
 import ProjectCard from "./components/ProjectCard.vue";
 import GithubRepos from "./components/GithubRepos.vue";
+import BubbleBackground from "./components/BubbleBackground.vue";
 
 interface Experience {
   role: string;
@@ -113,7 +115,8 @@ export default defineComponent({
   name: "PortfolioApp",
   components: {
     ProjectCard,
-    GithubRepos
+    GithubRepos,
+    BubbleBackground
   },
   setup() {
     const scrollProgress = ref(0);
@@ -210,7 +213,6 @@ export default defineComponent({
         'HTML5',
         'CSS3',
         'Git',
-        'Responsividade'
       ],
     };
   }
